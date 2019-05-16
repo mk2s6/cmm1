@@ -1,0 +1,22 @@
+{{> header }}	
+	<div class="main_content">
+		<h1>{{title}}</h1>
+        <div class="centered" style="text-align: center">
+            <form id="getMarksForm" class='form-container-register'>
+                    <div class='mdc-text-field' data-mdc-auto-init='MDCTextField'>
+                        <input class='mdc-text-field__input' type='text' id='roll_no' size='24' maxlength='10' required>
+                        <label for='roll_no' class='mdc-floating-label'>Enter Student Roll No :</label>
+                        <div class='mdc-line-ripple'></div> 
+                    </div>
+                    <button type='button' data-id='roll_no' id='check' class='mdc-button mdc-button--unelevated mdc-button--dense'>
+                        <i class='material-icons mdc-button__icon'>done</i>
+                        Get Details
+                    </button>
+            </form>
+        </div>
+        <div id="tableContainer" style="margin : 5px auto; width : 100%"></div>
+        <div id="cgpaContainer" class="centered"></div>
+	</div>
+
+    <script src="js/getMarks.js"></script>
+{{> footer-end }}

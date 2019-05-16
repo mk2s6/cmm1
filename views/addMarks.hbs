@@ -1,0 +1,32 @@
+{{> header }}	
+	<div class="main_content">
+		<h1>{{title}}</h1>
+        <div class="centered" style="text-align: center">
+            <div class='form-container-register'>
+                    <div class='mdc-text-field' data-mdc-auto-init='MDCTextField'>
+                        <input class='mdc-text-field__input' type='text' id='roll_no' size='24' maxlength='10' required>
+                        <label for='roll_no' class='mdc-floating-label'>Enter Student Roll No :</label>
+                        <div class='mdc-line-ripple'></div> 
+                    </div>
+                    <button type='button' data-id='roll_no' id='check' class='mdc-button mdc-button--unelevated mdc-button--dense'>
+                        <i class='material-icons mdc-button__icon'>done</i>
+                       Add Marks
+                    </button>
+            </div>
+        </div>
+        <div id="studentDetailContainer" class="centered"></div>
+        <div class="centered">
+            <form action="">
+                 <table id="marksContainer"></table>
+            </form>
+        </div>
+	</div>
+
+    <script src="js/addMarks.js"></script>
+    <script>
+        window.onbeforeunload = function() {
+            return "Are you sure you want to navigate away?";
+        }
+    </script>
+
+{{> footer-end }}

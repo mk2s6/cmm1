@@ -1,0 +1,11 @@
+@import "@material/button/mdc-button";
+
+$mahheight : 20px;
+
+$color: #0091EA;
+$color1: #6A1B9A;
+$color2 :#AD1457;
+ 
+.mdc-button {
+	@include mdc-button-container-fill-color($color2);
+}
