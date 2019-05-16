@@ -62,7 +62,6 @@ typings/
 
 
 #dot env file is not pushed to the git repo but a .env.default will be pushed as for the structure of .env
-.env
 
 
 #vscode settings
