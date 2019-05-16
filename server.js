@@ -36,9 +36,10 @@ app.set('views', path.join(__dirname , '/views'));
 app.set('view engine', '.hbs');
 
 
-const port = process.env.SERVER_PORT;
-app.listen(port || 4200, function (req, res) {
-	console.log('Server listnening at ' + port);
+const port = process.env.OPENSHIFT_NODEJS_PORT || process.env.SERVER_PORT || 8080;
+const serverIp = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+app.listen(port, serverIp, function (req, res) {
+	console.log('Server listnening at : '+ serverIp + ' port: ' + port);
 });
 
 var options = {
